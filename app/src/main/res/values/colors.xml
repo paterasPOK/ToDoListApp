@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="toolbar_background">#303F9F</color>
+    <color name="toolbar_title_text">#FFFFFF</color>
+    <color name="background">#F5F5F5</color>
+    <color name="todo_card_background">#FFFFFF</color>
+    <color name="todo_title_text">#212121</color>
+    <color name="todo_description_text">#757575</color>
+    <color name="date_time_text">#9E9E9E</color>
+    <color name="button_color">#4CAF50</color>
+    <color name="black">#000000</color>
+    <color name="delete_to_do">#FF0000</color>
+
+
+</resources>
