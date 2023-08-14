@@ -15,6 +15,8 @@ class ToDoViewModel (application: Application): AndroidViewModel(application){
     val allToDos: LiveData<List<ToDo>>
     private val repository: ToDoRepository
 
+
+
     init {
         val dao = ToDoDatabase.getToDosDatabase(application).getToDosDao()
         repository = ToDoRepository(dao)
@@ -33,5 +35,7 @@ class ToDoViewModel (application: Application): AndroidViewModel(application){
         repository.update(toDo)
     }
 
-
+    fun getToDosForSelectedDate(selectedDate: Long): LiveData<List<ToDo>>{
+        return repository.getToDosForSelectedDate(selectedDate)
+    }
 }

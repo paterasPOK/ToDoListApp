@@ -1,8 +1,10 @@
 package com.example.todolist.repository
 
 import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import com.example.todolist.db.ToDo
 import com.example.todolist.db.ToDosDao
+import java.util.Date
 
 class ToDoRepository(private val toDosDao: ToDosDao) {
 
@@ -23,5 +25,7 @@ class ToDoRepository(private val toDosDao: ToDosDao) {
         toDosDao.update(toDo)
     }
 
-
+    fun getToDosForSelectedDate(selectedDate: Long): LiveData<List<ToDo>>{
+        return toDosDao.getToDosForSelectedDate(selectedDate)
+    }
 }

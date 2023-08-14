@@ -3,13 +3,10 @@ package com.example.todolist.adapter
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.AdapterView.OnItemClickListener
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.todolist.R
 import com.example.todolist.db.ToDo
-import com.google.android.material.card.MaterialCardView
-import java.sql.Time
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
@@ -59,7 +56,7 @@ class ToDoRVAdapter(
         holder.txtTitle.text = toDo.title
         holder.txtDescription.text = toDo.description
         holder.txtDate.text = dateFormatter.format(Date(toDo.date))
-        holder.txtTime.text = timeFormatter.format(Date(toDo.date))
+        holder.txtTime.text = timeFormatter.format(Date(toDo.time))
 
     }
 
